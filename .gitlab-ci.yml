@@ -6,6 +6,7 @@ pages:
     - python build_page.py docs/assets/software.csv docs/
     - mkdocs build --site-dir public
   artifacts:
+    expire_in: 5 minutes
     paths:
       - public
   rules:
