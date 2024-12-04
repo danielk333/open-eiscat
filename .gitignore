@@ -1,0 +1,6 @@
+public/
+
+*.sublime*
+*.code*
+
+docs/software.md

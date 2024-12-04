@@ -1,0 +1,35 @@
+img[src*="#black-bg"] {
+    background-color: black;
+}
+img[src*="#white-bg"] {
+    background-color: white;
+}
+img[src*="#small"] {
+    max-height: 7em;
+}
+
+.md-grid {
+    max-width: 80%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 50px;
+    /* background-color: var(--md-accent-fg-color); */
+    background-color: var(--md-primary-fg-color);
+}
+
+.search-button:hover svg {
+    transform: scale(1.1);
+}

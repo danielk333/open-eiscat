@@ -1,0 +1,67 @@
+site_name: open-eiscat
+
+theme:
+  name: "material"
+  logo: assets/IRF_logo_blue_on_white.jpg
+  favicon: assets/IRF_logo_blue_on_white.jpg
+  features:
+    - navigation.instant
+    - navigation.path
+    - navigation.top
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: "#002d72"
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: "#002d72"
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  icon:
+    repo: fontawesome/brands/github
+
+
+repo_url: https://github.com/danielk333/open-eiscat
+
+extra_css:
+  - assets/style.css
+
+extra_javascript:
+  - js/search_cards.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - footnotes
+  - attr_list
+  - md_in_html
+  - admonition
+  - tables
+  - def_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Software: software.md

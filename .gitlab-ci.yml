@@ -1,0 +1,12 @@
+pages:
+  stage: deploy
+  image: python:latest
+  script:
+    - pip install -r requirements.txt
+    - python build_page.py docs/assets/software.csv docs/
+    - mkdocs build --site-dir public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
