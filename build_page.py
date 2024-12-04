@@ -42,9 +42,9 @@ fmt = """
 
         {abstract}
 
-    Status: {status}
-    Contact: {contact}
-    Tags: {tags}
+    - Status: {status}
+    - Tags: {tags}
+    - Contact: {contact}
 
     {links}
 
@@ -54,6 +54,8 @@ with open(args.input, "r") as fh:
     data = csv.DictReader(fh)
     for row in data:
         row["links"] = "\n\n    ".join(row["links"].split(";"))
+        row["status"] = ", ".join(f"`{x}`" for x in row["status"].split(";"))
+        row["tags"] = ", ".join(f"`{x}`" for x in row["tags"].split(";"))
         content += fmt.format(**row)
 
 content += """

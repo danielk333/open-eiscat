@@ -9,7 +9,7 @@ To get added to the list, either start a pull request on github or email `daniel
 ### Formats
 
 The links list is semi-colon `;` separated so that markdown can be used directly in the list
-Tags and status ids are comma separated and hence must be quoted in the csv.
+Tags and status ids are also `;` separated and these will be replaced by commas in rendering.
 
 ### GUI
 
